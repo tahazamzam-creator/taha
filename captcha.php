@@ -2,7 +2,7 @@
 session_start();
 
 // طول کپچا
-$length = 4;
+$length = 5;
 $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 $captcha_code = '';
 for ($i = 0; $i < $length; $i++) {
