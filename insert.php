@@ -11,7 +11,7 @@ $servername="localhost";
 $username="root";
 $password="";
 $database="ahmad";
-$conn= connect("localhost","root","","ahmad");
+$conn= connect("localhost","root","","");
 function ql($x , $y , $s , $h , $f, $conn)
 {
  $q="INSERT INTO taregh (f_name, l_name, n_code, father_name, phone_n)
