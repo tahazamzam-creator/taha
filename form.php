@@ -4,8 +4,8 @@
         <style>
             body
             {
-            background-color:gray;
-                font-family:;      
+            background-color:#6996ae;
+                font-family:tahoma;      
                 direction: rtl;
                 text-align: center;
                 margin:150px;
