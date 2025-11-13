@@ -10,14 +10,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // بررسی کپچا
     if(!isset($_SESSION['captcha']) || strtolower($captcha_input) !== strtolower($_SESSION['captcha'])) {
-     
+       
     } else {
         $conn = new mysqli("localhost", "root", "", "ahmad");
         if ($conn->connect_error) {
             die("❌ خطا در اتصال به دیتابیس: " . $conn->connect_error);
         }
 
-        $stmt = $conn->prepare("SELECT * FROM taregh WHERE user_name = ? AND pas = ?");
+        $stmt = $conn->prepare("SELECT * FROM tariq WHERE user_name = ? AND pas = ?");
         if (!$stmt) {
             die("❌ خطا در prepare: " . $conn->error);
         }
@@ -47,14 +47,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <style>
         body {
-            background-color: #96eb8eff;
+            background-color: #6996ae;
             font-family: tahoma;
             direction: rtl;
             text-align: center;
             margin: 150px;
         }
         .form { margin: 80px; }
-        img { margin: 10px 0; border: 1px solid #da0000ff; }
+        img { margin: 10px 0; border: 1px solid #000; }
     </style>
 </head>
 <body>
@@ -70,14 +70,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <label>کد امنیتی</label><br>
     <img src="captcha.php" alt="captcha"><br>
-
-    <input type="text" name="captcha" required><br>  <!-- اضافه کردن فیلد ورودی برای کپچا -->
+    <input type="text" name="captcha" required><br>
 
     <input type="submit" value="ورود"><br>
-    <input type="submit" value="ثبت نام"><br>
-</form>
-
-
 </form>
 </body>
 </html>
