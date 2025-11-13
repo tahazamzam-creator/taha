@@ -11,7 +11,7 @@ if (!isset($_SESSION['user'])) {
     <meta charset="UTF-8">
     <style>
         body {
-            background-color: #c7ee18ff;
+            background-color: #6996ae;
             font-family: tahoma;
             direction: rtl;
             text-align: center;
